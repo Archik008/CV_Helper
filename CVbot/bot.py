@@ -157,7 +157,7 @@ async def get_personal_data(msg: types.Message, state: FSMContext):
 @dp.message_handler(commands=['change_cv'])
 async def change_cv_kb(msg: types.Message):
     if not get_user(msg.from_id):
-        await msg.answer('У вас еще нету резюме чтобы вы могли его поменять')
+        await msg.answer('У вас еще нету резюме чтобы вы могли его изменить')
         return
     menu_cv_kb = types.InlineKeyboardMarkup(1)
     menu_cv_kb.add(
